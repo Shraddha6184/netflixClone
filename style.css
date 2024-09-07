@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100vw;
+    background-color: black;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: top 0.3s ease, background-color 0.3s ease;
+
+}
+
+.brand {
+    height: 80px;
+}
+
+.user {
+    height: 34px;
+}
+
+.hero {
+    width: 100%;
+    height: 90vh;
+    background: url('');
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100vw;
+    height: 12rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 16%, rgba(253, 187, 45, 0) 100%);
+}
+
+.hero-content {
+    position: absolute;
+    width: 40%;
+    bottom: 8rem;
+    left: 20px;
+    z-index: 9;
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.content-header>img {
+    height: 24px;
+}
+
+.content-header>span {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.content>h1 {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    color: whitesmoke;
+}
+
+.top10 {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.top10>div {
+    background-color: red;
+    color: white;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    border-radius: 4px;
+}
+
+.top10>div>span {
+    line-height: 80%;
+}
+
+.top10>div>span:first-child {
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.top10>div>span:nth-child(2) {
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.content {
+    width: 100%;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.content>p {
+    text-wrap: pretty;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.button {
+    gap: 5px;
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-play {
+    background-color: white;
+    color: black;
+}
+
+.btn-play>img {
+    width: 20px;
+}
+
+.btn-more {
+    background-color: gray;
+    color: white;
+}
+
+.cards {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 12px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+.cards-box {
+    background-color: black;
+    padding: 10px 14px;
+}
+
+.cards-title {
+    font-size: 24px;
+    color: whitesmoke;
+}
+
+.cardb {
+    width: 10rem;
+    height: 14rem;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cardb img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.cardb img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        width: 80%;
+        bottom: 4rem;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .content {
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .button {
+        width: 100%;
+        height: 2rem;
+    }
+    .cardb {
+        width: 8rem;
+        height: 12rem;
+    }
+    .cards {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        width: 90%;
+        bottom: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 20px;
+    }
+
+    .content {
+        font-size: 12px;
+    }
+
+    .cards-title {
+        font-size: 18px;
+    }
+
+    .cardb {
+        width: 6rem;
+        height: 9rem;
+    }
+}
